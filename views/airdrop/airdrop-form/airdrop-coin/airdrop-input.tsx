@@ -28,7 +28,7 @@ const AirdropInput: FC<AirdropCoinProps> = ({ setIsProgressView }) => {
 
   return (
     <>
-      {<AirdropCommonAmountField />}
+      <AirdropCommonAmountField />
       <AirdropPreviewButton handleOpenSummaryModal={handleOpenSummaryModal} />
     </>
   );
