@@ -28,7 +28,7 @@ const AirdropInput: FC<AirdropCoinProps> = ({ setIsProgressView }) => {
 
   return (
     <>
-      <AirdropCommonAmountField />
+      {method !== 'csv' && <AirdropCommonAmountField />}
       <AirdropPreviewButton handleOpenSummaryModal={handleOpenSummaryModal} />
     </>
   );

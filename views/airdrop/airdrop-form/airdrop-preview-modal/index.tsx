@@ -27,17 +27,20 @@ const AirdropPreviewModal: FC<AirdropPreviewModalProps> = ({
     control,
     name: 'token',
   });
+
   const usdPrice = useWatch({ control, name: 'tokenUSDPrice' });
   const airdropList = useWatch({ control, name: 'airdropList' });
 
   const total = airdropList
-    ? FixedPointMath.toNumber(
-        airdropList?.reduce(
-          (acc, { amount }) => acc.plus(BigNumber(amount)),
-          BigNumber(0)
-        ),
-        decimals
-      )
+    ? method === 'csv'
+      ? airdropList.reduce((acc, { amount }) => acc + Number(amount), 0)
+      : FixedPointMath.toNumber(
+          airdropList?.reduce(
+            (acc, { amount }) => acc.plus(BigNumber(amount)),
+            BigNumber(0)
+          ),
+          decimals
+        )
     : 0;
 
   return (
