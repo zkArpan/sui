@@ -29,7 +29,7 @@ const AirdropProgressIndicator: FC<AirdropProgressIndicatorProps> = ({
   );
 
   const isError = error || (finished && failedItems.length);
-  const token = getValues('token');
+  const [token, method] = getValues(['token', 'method']);
   const airdropListAddress = getValues('airdropList');
   const airdropTotalAmount =
     airdropList?.reduce(
@@ -155,7 +155,9 @@ const AirdropProgressIndicator: FC<AirdropProgressIndicatorProps> = ({
         >
           <Typography size="medium" variant="body">
             {formatMoney(
-              FixedPointMath.toNumber(airdropTotalAmount, token.decimals)
+              method === 'csv'
+                ? Number(String(airdropTotalAmount))
+                : FixedPointMath.toNumber(airdropTotalAmount, token.decimals)
             )}{' '}
             {token.symbol}
           </Typography>
