@@ -3,6 +3,7 @@ import { Network } from '@/constants';
 import { SIDEBAR_ITEMS } from './sidebar.data';
 
 export const existThisRouteInNetwork = (asPath: string, network: Network) =>
+  asPath.startsWith('/legacy') ||
   Boolean(
     SIDEBAR_ITEMS.filter((item) => {
       if (item.accordionList) {
