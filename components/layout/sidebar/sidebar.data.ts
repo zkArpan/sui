@@ -1,13 +1,13 @@
 import {
+  BLAST_FUN_EXTERNAL_LINK,
   INCINERATOR_EXTERNAL_LINK,
-  MEMEZ_GG_EXTERNAL_LINK,
   Network,
   Routes,
   RoutesEnum,
   SUI_TERMINAL_EXTERNAL_LINK,
 } from '@/constants';
 import {
-  //AirdropSVG,
+  BlastFunSVG,
   CirclePlusSVG,
   DoubleChevronSVG,
   FireSVG,
@@ -58,11 +58,11 @@ export const SIDEBAR_ITEMS: ReadonlyArray<IMenuItem> = [
   },
   {
     disabled: false,
-    name: 'MEMEZ.GG',
+    name: 'blast.fun',
+    Icon: BlastFunSVG,
     isExternalLink: true,
-    Icon: '/memez-head-icon.webp',
-    path: MEMEZ_GG_EXTERNAL_LINK,
-    suiWalletLink: MEMEZ_GG_EXTERNAL_LINK,
+    path: BLAST_FUN_EXTERNAL_LINK,
+    suiWalletLink: BLAST_FUN_EXTERNAL_LINK,
     networks: [Network.MAINNET, Network.TESTNET],
   },
   {
