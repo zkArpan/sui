@@ -1,4 +1,4 @@
-export const MEMEZ_GG_EXTERNAL_LINK = 'https://coins.memez.gg/';
+export const BLAST_FUN_EXTERNAL_LINK = 'https://blast.fun/';
 export const SUI_TERMINAL_EXTERNAL_LINK = 'https://terminal.suicoins.com';
 export const INCINERATOR_EXTERNAL_LINK = 'https://www.incinerator.suicoins.com';
 

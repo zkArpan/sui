@@ -14,6 +14,7 @@ export { default as AssetsSVG } from './assets';
 export { default as AVAXSVG } from './avax';
 export { default as AVAXChainSVG } from './avax-chain';
 export { default as BadgeSVG } from './badge';
+export { default as BlastFunSVG } from './blastfun';
 export { default as BNBSVG } from './bnb';
 export { default as BoxDownSVG } from './box-down';
 export { default as BSCChainSVG } from './bsc-chain';
