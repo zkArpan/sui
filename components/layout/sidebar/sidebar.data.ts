@@ -58,7 +58,7 @@ export const SIDEBAR_ITEMS: ReadonlyArray<IMenuItem> = [
   },
   {
     disabled: false,
-    name: 'blast.fun',
+    name: 'BLAST.FUN',
     Icon: BlastFunSVG,
     isExternalLink: true,
     path: BLAST_FUN_EXTERNAL_LINK,
